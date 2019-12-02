@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col">
+        <h1>*ngIf</h1>
+        <hr>
+        <div *ngIf="mostrar" class="card text-white bg-dark mb-3" style="max-width:100%;">
+                <div class="card-body">
+                        <h5 class="card-title">{{this.frase.autor}}</h5>
+                        <p class="card-text">{{frase.mensaje}}</p>
+                </div>
+              </div>
+            <button class="btn btn-dark btn-block"(click)="mostrarUOcultar()" >mostrar/ocultar</button>              
+    </div>
+    <div class="col">
+        <h1>*ngFor</h1>
+        <hr>
+        <ul class="list-group">
+                <li *ngFor="let heroe of heroes;let i=index "class="list-group-item">{{i+1}}-{{heroe}}</li>
+                
+              </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <h1>*ngClass</h1>
+    
+    <div  [ngClass]="clase" class="clase" style="max-width:100%;">
+            <div class="card-body">
+         <h5 class="card-title">Dark card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        <button [ngClass]="claseButton"class="claseButton"(click)="cambiarColorACard()">{{leyenda}}</button>              
+    </div>
+
+
+
+</div>
+
+
+   
